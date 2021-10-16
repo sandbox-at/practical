@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.one {
+  background: red;
+}
+
+.two {
+  background: green;
+}
+
+.three {
+  background: yellow;
+}
+div {
+  height: 200px;
+  width: 33%;
+  float: left;
+  /* with float: left other div are wrapped around other div . As width is not 100 percent so div occupying small width and wrap it as left and appears like column */
+}
