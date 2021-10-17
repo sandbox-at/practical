@@ -1,0 +1,25 @@
+/* ::before ::after pseudo elements create element and insert before and after content
+content:'' required while selecting pseudo element
+img does not work
+if content:"" blank value, then width and height needs to be passed for element to appear
+*/
+
+p::before {
+  content: "hello there";
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
+  display: block;
+  background: black;
+}
+
+p::after {
+  content: "";
+  width: 80%;
+  height: 3rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: red;
+  display: block;
+  background: black;
+}
