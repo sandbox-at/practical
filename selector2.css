@@ -1,0 +1,16 @@
+/* :root element of the document, higher specificity 
+html element
+general styles
+css variables*/
+/* With :root just update the value and relative element will get updated based on :root element
+ */
+:root {
+  font-size: 40px;
+}
+.absolute {
+  font-size: 24px;
+}
+
+.relative {
+  font-size: 1.4 rem;
+}
