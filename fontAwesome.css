@@ -1,0 +1,9 @@
+/* Use to download font awesome locally for icons
+https://fontawesome.com/v5.15/how-to-use/on-the-web/setup/hosting-font-awesome-yourself */
+.fa-home {
+  color: green;
+}
+.social-icon {
+  color: red;
+  font-size: 3rem;
+}
