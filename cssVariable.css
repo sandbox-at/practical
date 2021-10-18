@@ -1,0 +1,45 @@
+/* CSS variables or custom preoperties
+allow to store value in one place and reus it later
+--varName::value
+propert:var(--varName) 
+scope
+:root{} == global
+element == local
+any property */
+:root {
+  --primaryColor: orange;
+  --cl-secondary: red;
+  --mainTransition: all 1s linear;
+  --mainSpacing: 5px;
+}
+
+h1 {
+  color: var(--primaryColor);
+}
+h2 {
+  color: var(--primaryColor);
+}
+h3 {
+  color: var(--primaryColor);
+  transition: var(--mainTransition);
+}
+p {
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+}
+
+h3:hover {
+  color: var(--cl-secondary);
+}
+p:hover {
+  color: var(--cl-secondary);
+}
+
+/* Defining variable locally e.g  div element */
+
+div {
+  --primaryYellow: #94940b;
+}
+.main-text {
+  color: var(--primaryYellow);
+}
