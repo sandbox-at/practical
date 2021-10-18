@@ -3,23 +3,46 @@ content:'' required while selecting pseudo element
 img does not work
 if content:"" blank value, then width and height needs to be passed for element to appear
 */
-
-p::before {
-  content: "hello there";
-  font-size: 2rem;
-  font-weight: bold;
-  color: red;
+div {
+  width: 70vw;
+  margin: 100px auto;
+  position: relative;
+}
+img {
+  width: 100%;
+  height: 70%;
   display: block;
-  background: black;
 }
 
-p::after {
+div::before {
   content: "";
-  width: 80%;
-  height: 3rem;
-  font-size: 3rem;
-  font-weight: bold;
-  color: red;
-  display: block;
-  background: black;
+  border: 2px solid red;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -40px;
+  left: -40px;
+  z-index: -2;
+  transition: all 0.5s linear;
+}
+
+div::after {
+  content: "";
+  background: rgba(128, 128, 128, 0.5);
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+  transition: all 0.5s linear;
+}
+
+div:hover::after,
+div:hover::before {
+  top: 0;
+  left: 0;
 }
