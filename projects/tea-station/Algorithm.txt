@@ -1,0 +1,17 @@
+Have assets downloaded and ready a. Font awesome for icons b. Images for products 
+Create html,css and javascript files and link html files with css and javascript reference
+Add barebone html (doc Emmet)
+Start CSS with global CSS variables for color,font size ,spacing , border radium 
+Add global css styles considering global style is passed for smaller screensize and we will pass media query for larger viewpoint and override:
+
+(* , body) e.g : padding,margin and box sizing,font family,line height,font size,color
+Add styles for img or anchor links
+Add styles for smaller screen first with predeined html tag
+Override with mediaquery screens for bigger screen
+Now Start creating html design
+Think/Refer visual/wireframe first while developing html
+HTML design: sample below
+Add navbar in body
+Add header element in body
+Banners , slider,hero area should be part of header
+Style the banners
