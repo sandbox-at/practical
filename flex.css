@@ -1,0 +1,45 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #f3f3f3;
+}
+
+.container {
+  border: 4px solid red;
+}
+.box {
+  padding: 30px;
+
+  font-size: 34px;
+  color: #f3f3f3;
+}
+.box1 {
+  background: #581f18;
+}
+
+.box2 {
+  background: #3e1858;
+}
+.box3 {
+  background: #e44a4a;
+}
+.box4 {
+  background: #182958;
+}
+.box5 {
+  background: #18ad20;
+}
+
+.generic {
+  background: #182958;
+}
+
+/* Select flex container */
+.container {
+  display: flex;
+  /* display: inline-flex; */
+  /* Usecase : Flex direction can be used when to manipulate the order of existing element */
+  /* flex-direction: row; this behavior is default behavior:  */
+  flex-direction: row-reverse;
+  /* flex-direction: column;
+  flex-direction: column-reverse; */
+}
