@@ -39,7 +39,54 @@ body {
   /* display: inline-flex; */
   /* Usecase : Flex direction can be used when to manipulate the order of existing element */
   /* flex-direction: row; this behavior is default behavior:  */
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
   /* flex-direction: column;
   flex-direction: column-reverse; */
+  justify-content: center;
+  height: 40vh;
+  /* flex-wrap: wrap; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align items center is align center vertically */
+  align-items: center;
+  /* align-items: baseline; */
+  /* align-content: flex-end;
+  align-content: flex-start; */
+  /* align-content: center;
+  align-content: space-around;
+  align-content: space-between; */
+}
+.container1 {
+  height: 800px;
+  border: 5px solid blue;
+  display: flex;
+  flex-direction: column;
+  /* when flex direction is set as column , justify content :center 
+  will place element vertically center , align-items:center will shift horizontally center as opposite to flex-direction :row */
+  align-items: center;
+  justify-content: center;
+}
+/* Changing the order of element display using CSS
+By default element order is set as 0 ,adding order with higher number will appear last */
+.box1 {
+  order: 1;
+}
+.box3 {
+  order: 2;
+}
+.box5 {
+  order: -1;
+}
+
+/* align-self  can be used to align individual element without changing other child element*/
+/* .box4 {
+  align-self: flex-end;
+} */
+
+/* To fill out the container with children use flex-grow:1 */
+.box1 {
+  flex-grow: 1;
+}
+.box1 {
+  flex-grow: 2;
 }
