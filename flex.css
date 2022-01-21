@@ -5,6 +5,7 @@ body {
 
 .container {
   border: 4px solid red;
+  flex-wrap: wrap;
 }
 .box {
   padding: 30px;
@@ -90,3 +91,4 @@ By default element order is set as 0 ,adding order with higher number will appea
 .box1 {
   flex-grow: 2;
 }
+/* flexbasis adds based value above which box should appear as it is . Below that it would wrap if flex-wrap is set to wrap */
