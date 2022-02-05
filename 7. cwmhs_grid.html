@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid : To layout or align page content</title>
+    <style>
+        .container{
+            display: grid;
+            /* Set 3 rows and 2 columns */
+            /* grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px 100px; */
+            /* If want to set first column as 30 */
+            border: 3px solid lightgray;
+            justify-items: center;
+            align-items: center;
+            /* justify-content: center;
+            align-content: center; */
+            height: 100vh;
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+
+        .box{
+            width: 5rem;
+            height: 5rem;
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+
+    </div>
+</body>
+</html>

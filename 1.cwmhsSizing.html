@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Add border box box sizing to root element */
+        *{box-sizing: border-box;}
+        .box::before{
+            content: "Hello";
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            padding: 20px;
+            border: 10px solid orange;
+            margin: 10px;
+            /* box-sizing: border-box; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

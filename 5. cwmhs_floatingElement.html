@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Element</title>
+    <style>
+        .avatar{
+            width:5rem ;
+            height: 5rem;
+            background-color: yellow;
+            /* To move block element i.e paragraph to right need to use float property or move avatar element to left*/
+            float: left;
+            /* If no space between avatar and paragraph text then use margin-right to avatar or margin-left to paragraph */
+            margin-right: .4rem;
+        }
+        /* If don't want second line to start after avatar, we can clear the float property */
+        .clear{
+            clear: left;
+        }
+        /* Parent collapsing : parent element ignores/don't see floated element and get collapsed*/
+        .tweet{
+            border:2px solid red;
+        }
+        .tweet::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <article class="tweet">
+        <div class="avatar"></div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore rerum officia facilis a possimus fugiat! Soluta accusamus aspernatur iure reiciendis.</p>
+        <!-- <p class="clear">Lorem ipsum dolor sit amet consectetur adipisicing elit. A quas quam ipsam commodi quis? Corporis
+            magnam voluptate delectus! Esse rerum amet beatae velit voluptatibus possimus nesciunt, ex itaque eaque assumenda.
+        </p> -->
+    </article>
+</body>
+</html>

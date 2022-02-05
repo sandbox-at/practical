@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo positioning</title>
+    <style>
+        .boxes{
+            /* relative unit to avoid issues */
+            width: 10rem;
+            height: 10rem;
+            position: relative;
+        }
+        .box{
+            /* relative unit to avoid issues */
+            width: 10rem;
+            height: 10rem;
+        }
+        
+        .box1{
+            background-color: pink;
+            /* box1 will change the position from box2 and box3 and comes out of normal flow */
+            /* position: absolute;
+            top: 2rem;
+            right: 4rem; */
+        }
+        .box2{
+            background-color: orange;
+            /* With position,relative it will only change the position of 2nd box keeping other box intact
+            position: relative;
+            Leave (10 times of root element font size) as space from top */
+            /* top: 10rem; */
+             /* Leave (2 times of root element font size) as space from left 
+            left: 2rem;  */
+            
+        }
+        .box3{
+            background-color: red;
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    </div>
+    
+</body>
+</html>

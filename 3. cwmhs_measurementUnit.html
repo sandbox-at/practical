@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absoute and Relative Units</title>
+    <style>
+        body{
+
+        }
+        .box{
+            /* Absolute measurement unit */
+            /* width: 100px;
+            height: 100px; */
+            /* 50% of width of parent i.e body */
+            /* width: 50%; */
+            /* 100% of height of parent i.e body */
+            /* height: 50%; */
+            /* Use vw  or vh based on viewports */
+            /* width:50vw ;*/
+            height:50vh ; 
+            /* em is relative to fontsize of current element(or inherited font size) i.e here 
+            width is 20*1px as fint size is not defined for .box or body element so font size inherited as 1px i.e default html
+            font size */
+            width: 20em;
+
+            background-color: gold;
+            border: 3px solid orange;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>
