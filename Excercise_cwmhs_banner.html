@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+        html{
+            font-size: 65.5%;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+        .hero{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            
+            background: url(/images/jeremy-thomas-E0AHdsENmDg-unsplash_icm7gv_c_scale\,w_424.jpg);
+           
+            background-size: cover;
+            background-repeat: no-repeat;
+             text-align: center;
+            justify-content: center;
+            padding: 1rem;
+            
+
+        }
+
+        h1{
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 5rem;
+            text-shadow: 2px 2px 0 #000;
+            word-spacing: 1.5rem;
+        }
+        p{
+            text-transform: capitalize;
+            font-size: 2rem;
+            font-weight: 300;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1.5rem;
+            letter-spacing: 1.5px;
+            
+            
+           
+        }
+        @media screen and (min-width:853px){
+            .hero{
+                background: url(/images/jeremy-thomas-E0AHdsENmDg-unsplash_icm7gv_c_scale\,w_871.jpg);
+                background-size: cover;
+            }
+            
+        }
+          @media screen and (min-width:1228px){
+            .hero{
+                background: url(/images/jeremy-thomas-E0AHdsENmDg-unsplash_icm7gv_c_scale\,w_1296.jpg);
+                background-size: cover;
+            }
+            
+        }
+         @media screen and (min-width:1440px){
+            .hero{
+                background: url(/images/jeremy-thomas-E0AHdsENmDg-unsplash_icm7gv_c_scale\,w_1400.jpg);
+                background-size: cover;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <main class="hero">
+        <h1>Hubble Space Telescope</h1>
+        <p>30 Years Of Discovery</p>
+
+    </main>
+    
+</body>
+</html>

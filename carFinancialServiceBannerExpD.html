@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner</title>
+    <style>
+        body{
+            color:white
+        }
+        .att_hero{
+            background: url(https://www.lloydsbank.com/assets/media/car-finance/car_finance_banner_final_d_2x.jpg);
+            height: 60vh;
+            width: 100vw;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            padding: 0 auto;
+            margin-left:20%;
+             }
+             div{
+                 display: flex;
+                 flex-direction: column;
+                 width: 32%;
+                 height: 60%;
+                 padding:1rem 1rem .5rem .5rem;
+                 background:#005eb8 ;
+                 position: relative;
+                 margin: auto 1rem auto 1rem;
+                 border-radius: 1rem;
+                
+             }
+             .first-row{
+                 flex-direction: row;
+                width:90%;
+             }
+             button{
+                 background:white ;
+                 padding: .5rem .5rem .5rem .5rem;
+                 border-radius: 1rem;
+             }
+             input{
+                 margin: .1rem;
+             }
+            
+            
+
+    </style>
+</head>
+<body>
+    <section class="att_hero">
+        <div>
+        <h1>Car Finance Calculator</h1>
+       <div class="first-row">
+        <label for="price">price of car</label>
+        <input id="price" type="text">
+
+        <label for="repay">Repayment</label>
+        <input id="repay" type="text">
+        </div>
+        <div class="row-2">
+        <label for="dep">Deposit</label>
+        <input id="dep" type="text">
+        </div>
+       <div class="submit">
+        <button type="submit">Start calculating your plan</button>
+        </div>
+    </div>
+    </section>
+    
+</body>
+</html>

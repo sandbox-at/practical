@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements Input Controls</title>
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <style>
+        form{
+            width: 50%;
+            padding: 2rem;
+        }
+        textarea{
+            resize: none;
+        }
+    </style>
+
+</head>
+<body>
+    <form>
+        <!-- autofocus sets the element in focus mode when page loads . Useful to add 
+        for User registration-->
+        <input type="password" autofocus>
+        <input type="date">
+        <!-- maxlength sets the number of character user can enter -->
+        <input type="number" maxlength="4">
+        <input type="text"placeholder="This is to add prepopulate value but disappears when start typing">
+        <input type="email" value="this is to add prepopulated value">
+        <!-- text area does not have value attribute , you can pass value as text
+        <textarea>Add value</textarea>-->
+        <textarea cols="30" rows="10" ></textarea>
+    </form>
+</body>
+</html>
