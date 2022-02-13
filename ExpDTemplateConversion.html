@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <h1 style="background-color: red;">Hello World!</h1>
+    <p>This is a paragraph.</p>
+
+</body>
+
+</html>
+
+<script>
+
+    var att_config = {
+        // =========================== USER DEFINED CONFIGURATION ===========================
+        // Non clickable text to display in the ribbon. Use empty quotes for blank text. Try to keep it under 80 characters.
+        headerText: "See the promotion we are running."
+        // // Clickable text to display in the ribbon. Use empty quotes for a blank link. Keep it under 30 characters.
+        // ctaLinkText: "Details",
+        // // Clickable text links to this URL
+        // ctaLink: "https://www.adobe.com/marketing-cloud/target.html",
+        // // Ribbon background color
+        // content_bg_color: '#4A4A4A',
+        // // Ribbon text color
+        // headerTextColor: '#ffffff'
+        // =========================== END USER DEFINED CONFIGURATION ===========================
+    };
+    (function () {
+        "use strict";
+        var text = null != att_config.headerText && att_config.headerText ? att_config.headerText : "",
+            ctaLinkText = null != att_config.ctaLinkText && att_config.ctaLinkText ? att_config.ctaLinkText : "",
+            ctaLink = null != att_config.ctaLink && att_config.ctaLink ? att_config.ctaLink : "",
+            content_bg_color = null != att_config.content_bg_color && att_config.content_bg_color ? att_config.content_bg_color : "#4A4A4A",
+            headerTextColor = null != att_config.headerTextColor && att_config.content_bg_color ? att_config.headerTextColor : "#ffffff",
+            template = '\n <section class="att_hero">\n <div class="att_hero_content">\n <div class="containe r-fluid">\n<h1 class="att_header_text"> Car Finance</h1>\n<br>\n<br>\n<div class="row">\n<div class="col-sm-6">\n<div class="number number-price">\n<label for="budget">Price of car</label>\n<div>\n <span class="minus pre minus-price">-</span>\n<span class="txt">\n <input type="text" id="budgetprice" value="13000"></span>\n<span class="plus plus-price">+</span>\n</div>\n</div>\n</div>\n<div class="col-sm-6">\n<div class="number number-repay">\n<label for="repay">Repayment</label>\n<div>\n<span class="minus minus-repay">-</span>\n<span class="txt2">\n<input type="text" id="repay" value="48"></span>\n<span class="plus plus-repay">+</span>\n</div>\n</div>\n</div>\n<div class="col-sm-12" id="fullcol">\n<div class="number number-deposit">\n<label for="deposit">Deposit</label>\n<div>\n<span class="minus minus-deposit">-</span>\n<span class="txt">\n<input type="text" id="deposit" value="3000"> \n</span>\n<span class="plus plus-deposit">+</span>\n</div>\n</div>\n</div>\n</div>\n<br>\n <a class="att_btn att_btn-primary" data-selector="cta-item-"href="https://secure.halifax-online.co.uk/personal/a/car_finance_hub/" itemprop="url" data-tealium-event="External Click" data-tealium-narrative="Get started here">\n<span class="btn-text" itemprop="name">Get a quote</span>\n</a>\n<p class="legal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, repellendus.</p>\n</div>\n</div>\n<img class=att_hero_mobile_image src="https://www.lloydsbank.com/assets/media/car-finance/car_finance_banner_final_d_2x.jpg" alt="bannerimgaes">\n</section>"\n',
+            style = "\n  .att_hero {\n    background: none;\n display: flex;\n flex-direction: column;\n height: 488px;\n position: relative;\n color: white;\n  }\n  .att_hero_content  {\n background: #005eb8;\n max-width: 1100px; \n min-width: 0;\n padding: 8px 10px 8px;\n }\n  .att_header_text  {\n line-height: 2.889rem;\n margin-bottom: 12px; \n max-width: 100%;\n text-transform: none;\n width: 100%;\n font-size: 2.666rem;\n}\n .att_sub_header_text{\n font-size: 1.333rem;\n line-height: 1.888rem; \n max-width: 100%;\n margin-bottom: 24px;\n}\n .att_hero_mobile_image{\n height: 320px;\n object-fit:cover; \n display:block;\n  width: 100%;\n border-style:none;\n}\n.att_btn-primary{\n background-color: #fff;\n max-width: 278px; \n min-width: 168px;\n  text-align: center;\n padding:15px;\n border-radius: 28px; \n display: inline-block;\n font-size: 14px; \n  font-weight: 600; \n line-height: 1.5rem;\n margin-top: 1rem; \n color: #005eb8;\n word-break: break-word;\n }\n a:link{ \n text-decoration: none;\n}\n a:hover{ \n text-decoration: underline; \n color: #071d49;\n }\n .legal{\n margin-top: 3rem;\n font-size:12px;\n}\n label{\n display: block;\n font-weight: 400;\n font-size: 16px; \n} \n input[type='text']{\n padding:.6rem .6rem;\n color: #000;\n}\n span{\n cursor: pointer; \n}\n .minus{\n margin-right: -4px \n}\n .plus{\n margin-left: -4px; \n}\n .minus,.plus,.pre{\n width: 20px; \n height: 34px;\n background: #f2f2f2; \n padding: 8px 0 8px 0;\n border: 1px solid #ddd;\n display: inline-block; \n vertical-align: middle; \n text-align: center; \n \n color: #005eb8; \n  top: -2px;\n}\n .number{\n display: inline;\n }\n span.txt{\n position: relative;\n}\n span.txt input{\n padding-left: 15px;\n}\n span.txt:after{\n position: absolute;\n left: 6px;\n top: -5.5px;\n content: '£';\n color: #000; \n font-size: 20px; \n font-family: sans-serif; \n }\n span.txt2 {\n position: relative;\n}\n span.txt2:after {\n position: absolute;\n right: 6px; \n top: 0; \n content: 'Months'; \n color: #000; \n font-size: 12px; font-family: sans-serif; \n}\n #fullcol {\n margin: 30px 0 30px 0 !important; \n}\n  #repay {\n text-align: left;\n}\n @media (min-width: 768px){\n.att_hero {\n background-image: url(https://www.lloydsbank.com/assets/media/car-finance/car_finance_banner_final_d_2x.jpg);\n background-position: 50%;\n background-repeat: no-repeat;\n background-size: cover;\n width: 1040px;\n display: block;\n margin: 0 auto;\n}\n  .att_hero_content {\n margin-left: 30px;\n zoom: 1;\n background: #005eb8;\n border-radius: 6px;\n position: absolute;\n top: 50%;\n transform: translateY(-50%);\n width: 480px;}\n.att_btn-primary{\n display: inline-block;\n}\n.att_hero_mobile_image{\n display: none;\n}}\n",
+            handlers = function () {
+                document.body.classList.add("att_hero")
+            };
+        injector({
+            templateClass: "hero-image",
+            template: template,
+            style: style,
+            handlers: handlers
+        });
+        "use strict";
+
+        function injector(e) {
+            var t = null != e.el && e.el ? e.el : document.body,
+                l = document.createElement("div");
+            e.templateClass && l.classList.add(e.templateClass), l.innerHTML = null != e.template && e.template ? e.template.replace(/(\r\n\t|\n|\r\t)/gm, "") : "", t.appendChild(l);
+            var n = document.createElement("style");
+            n.innerText = null != e.style && e.style ? e.style.replace(/(\r\n\t|\n|\r\t)/gm, "") : "", document.head.appendChild(n), null != e.handlers && "function" == typeof e.handlers && e.handlers()
+        }
+    })();
+</script>

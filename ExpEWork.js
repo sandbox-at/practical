@@ -1,10 +1,39 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banner</title>
-    <style>
+var myConfig = {
+  img1: "https://www.lloydsbank.com/assets/media/car-finance/car_finance_banner_final_d_2x.jpg",
+  elementToReplace: ".hero-image",
+  bgColor: "#005eb8",
+};
+
+(function () {
+  var template = `<section class="att_hero">
+      <div class="att_hero_content">
+        <h1 class="att_header_text">Car Finance</h1>
+        <p class="att_sub_header_text">
+          If you're a Halifax current account holder and want to buy a car, or
+          switch your current car finance to us, it's simple.
+        </p>
+        <label for="budget">Your monthly budget</label>
+        <input type="text" id="budgetprice" value="£ 160" />
+        <a
+          class="att_btn att_btn-primary"
+          data-selector="cta-item-"
+          href="https://secure.halifax-online.co.uk/personal/a/car_finance_hub/"
+          itemprop="url"
+          data-tealium-event="External Click"
+          data-tealium-narrative="Get started here"
+          ><span class="btn-text" itemprop="name">Get a quote</span></a
+        >
+        <p class="legal">Rates from 3.4% APR, No impact on your credit score</p>
+      </div>
+
+      <img
+        class="att_hero_mobile_image"
+        src=${myConfig.img1}
+        alt="bannerimgaes"
+      />
+    </section>`;
+
+  var css = `
       body {
         box-sizing: border-box;
       }
@@ -19,7 +48,7 @@
       }
 
       .att_hero_content {
-        background: #005eb8;
+        background: ${myConfig.bgColor};
         max-width: 1100px;
         min-width: 0;
         padding: 10px 18px 10px;
@@ -91,7 +120,7 @@
         .att_hero_content {
           margin-left: 30px;
           zoom: 1;
-          background: #005eb8;
+          background: ${myConfig.bgColor};
           border-radius: 6px;
 
           padding: 20px 30px 30px;
@@ -108,36 +137,33 @@
           display: none;
         }
       }
-    </style>
-  </head>
+    `;
 
-  <body>
-    <section class="att_hero">
-      <div class="att_hero_content">
-        <h1 class="att_header_text">Car Finance</h1>
-        <p class="att_sub_header_text">
-          If you're a Halifax current account holder and want to buy a car, or
-          switch your current car finance to us, it's simple.
-        </p>
-        <label for="budget">Your monthly budget</label>
-        <input type="text" id="budgetprice" value="£ 160" />
-        <a
-          class="att_btn att_btn-primary"
-          data-selector="cta-item-"
-          href="https://secure.halifax-online.co.uk/personal/a/car_finance_hub/"
-          itemprop="url"
-          data-tealium-event="External Click"
-          data-tealium-narrative="Get started here"
-          ><span class="btn-text" itemprop="name">Get a quote</span></a
-        >
-        <p class="legal">Rates from 3.4% APR, No impact on your credit score</p>
-      </div>
+  var element = document.createElement("link");
+  element.setAttribute("rel", "stylesheet");
+  element.setAttribute("type", "text/css");
+  element.setAttribute(
+    "href",
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+  );
+  document.getElementsByTagName("head")[0].appendChild(element);
 
-      <img
-        class="att_hero_mobile_image"
-        src="https://www.lloydsbank.com/assets/media/car-finance/car_finance_banner_final_d_2x.jpg"
-        alt="bannerimgaes"
-      />
-    </section>
-  </body>
-</html>
+  var head = document.head || document.getElementsByTagName("head")[0];
+  var style = document.createElement("style");
+
+  head.appendChild(style);
+
+  style.type = "text/css";
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+
+  var s = document.createElement("script");
+  s.type = "text/javascript";
+  s.src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js";
+  $("head").append(s);
+
+  document.querySelector(myConfig.elementToReplace).innerHTML = template;
+})();
