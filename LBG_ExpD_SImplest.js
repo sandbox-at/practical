@@ -7,10 +7,10 @@ var myConfig = {
 (function () {
   var template = ` <section class="att_hero">
       <div class="att_hero_content">
-        <div class="container-fluid">
+        <div class="att_container-fluid">
           <h1 class="att_header_text">Car Finance</h1>
-          <br /><br />
-          <div class="row">
+          
+          <div class="att_row">
             <div class="col-sm-6">
               <div class="number number-price">
                 <label for="budget">Price of car</label>
@@ -37,7 +37,7 @@ var myConfig = {
               </div>
             </div>
 
-            <div class="col-sm-12" id="fullcol">
+            <div class="col-sm-12 att_fullcol">
               <div class="number number-deposit">
                 <label for="deposit">Deposit</label>
                 <div>
@@ -50,11 +50,11 @@ var myConfig = {
               </div>
             </div>
           </div>
-          <br />
+          
           <a
             class="att_btn att_btn-primary"
             data-selector="cta-item-"
-            href="https://secure.halifax-online.co.uk/personal/a/car_finance_hub/"
+            href="https://www.halifax.co.uk/car-finance/calculator.html"
             itemprop="url"
             data-tealium-event="External Click"
             data-tealium-narrative="Get started here"
@@ -84,12 +84,12 @@ var myConfig = {
         background: none;
         display: flex;
         flex-direction: column;
-        height: 488px;
+        min-height: 488px;
         position: relative;
         color: white;
       }
 
-      .att_hero_content {
+      .att_hero .att_hero_content {
         background: #005eb8;
         max-width: 1100px;
         min-width: 0;
@@ -217,11 +217,11 @@ var myConfig = {
           display: block;
           margin: 0 auto;
         }
-        /* Done */
+     
         .att_hero_content {
           margin-left: 30px;
           zoom: 1;
-          background: #005eb8;
+          background:#005eb8;
           border-radius: 6px;
 
           /* padding: 20px 30px 30px; */
@@ -280,8 +280,8 @@ var myConfig = {
         font-family: sans-serif;
       }
 
-      #fullcol {
-        margin: 30px 0 30px 0 !important;
+      .att_fullcol {
+        margin: 1px 0 30px 0;
       }
 
       #repay {
@@ -315,6 +315,13 @@ var myConfig = {
   s.src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js";
   $("head").append(s);
   $(document).ready(function () {
+    document.querySelector(myConfig.elementToReplace).innerHTML = template;
+    document
+      .querySelector(".att_btn-primary")
+      .addEventListener("click", function () {
+        budgetValue = document.querySelector("#budgetprice").value;
+        x = localStorage.setItem("budgetValue", budgetValue);
+      });
     $(".minus-price").click(function () {
       var $input = $(this).parent().find("input");
       var count = parseInt($input.val()) - 250;
@@ -359,5 +366,4 @@ var myConfig = {
       return false;
     });
   });
-  document.querySelector(myConfig.elementToReplace).innerHTML = template;
 })();

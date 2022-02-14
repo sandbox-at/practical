@@ -1,10 +1,10 @@
-var myConfig = {
-  img1: "https://www.lloydsbank.com/assets/media/car-finance/car_finance_banner_final_d_2x.jpg",
-  elementToReplace: ".hero-image",
-  bgColor: "#005eb8",
-};
-
 (function () {
+  var myConfig = {
+    img1: "https://www.lloydsbank.com/assets/media/car-finance/car_finance_banner_final_d_2x.jpg",
+    elementToReplace: ".hero-image",
+    bgColor: "#005eb8",
+  };
+
   var template = `<section class="att_hero">
       <div class="att_hero_content">
         <h1 class="att_header_text">Car Finance</h1>
