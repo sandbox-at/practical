@@ -2,33 +2,18 @@ var myConfig = {
   img1: "https://www.lloydsbank.com/assets/media/car-finance/car_finance_banner_final_d_2x.jpg",
   elementToReplace: ".hero-image",
   bgColor: "#005eb8",
-  headerText: "Car Finance",
-  ctaText: "Get a quote",
-  ctaHoverColor: "#071d49",
-  ctaUrl: "https://www.halifax.co.uk/car-finance/calculator.html ",
-  legalText:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, repellendus.",
-  ctaBgColor: "#fff",
-  label1: "Price of car",
-  label2: "Repayment",
-  label3: "Deposit",
 };
 
 (function () {
-  var template =
-    ` <section class="att_hero">
+  var template = ` <section class="att_hero">
       <div class="att_hero_content">
         <div class="att_container-fluid">
-          <h1 class="att_header_text">` +
-    myConfig.headerText +
-    `</h1>
+          <h1 class="att_header_text">Car Finance</h1>
           
           <div class="att_row">
             <div class="col-sm-6">
               <div class="number number-price">
-                <label for="budget">` +
-    myConfig.label1 +
-    `</label>
+                <label for="budget">Price of car</label>
                 <div>
                   <span class="minus pre minus-price">-</span>
                   <span class="txt">
@@ -40,9 +25,7 @@ var myConfig = {
             </div>
             <div class="col-sm-6">
               <div class="number number-repay">
-                <label for="repay">` +
-    myConfig.label2 +
-    `</label>
+                <label for="repay">Repayment</label>
                 <div>
                   <span class="minus minus-repay">-</span>
                   <span class="txt2">
@@ -56,9 +39,7 @@ var myConfig = {
 
             <div class="col-sm-12 att_fullcol">
               <div class="number number-deposit">
-                <label for="deposit">` +
-    myConfig.label3 +
-    `</label>
+                <label for="deposit">Deposit</label>
                 <div>
                   <span class="minus minus-deposit">-</span>
                   <span class="txt">
@@ -73,36 +54,28 @@ var myConfig = {
           <a
             class="att_btn att_btn-primary"
             data-selector="cta-item-"
-            href=` +
-    myConfig.ctaUrl +
-    `
+            href="https://www.halifax.co.uk/car-finance/calculator.html"
             itemprop="url"
             data-tealium-event="External Click"
             data-tealium-narrative="Get started here"
-            ><span class="btn-text" itemprop="name">` +
-    myConfig.ctaText +
-    `</span></a
+            ><span class="btn-text" itemprop="name">Get a quote</span></a
           >
 
           <p class="legal">
-            ` +
-    myConfig.legalText +
-    `
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
+            repellendus.
           </p>
         </div>
       </div>
 
       <img
         class="att_hero_mobile_image"
-        src=` +
-    myConfig.img1 +
-    `
+        src="https://www.lloydsbank.com/assets/media/car-finance/car_finance_banner_final_d_2x.jpg"
         alt="bannerimgaes"
       />
     </section>`;
 
-  var css =
-    `
+  var css = `
       body {
         box-sizing: border-box;
       }
@@ -117,9 +90,7 @@ var myConfig = {
       }
 
       .att_hero .att_hero_content {
-        background:  ` +
-    myConfig.bgColor +
-    ` ;
+        background: #005eb8;
         max-width: 1100px;
         min-width: 0;
         padding: 8px 10px 8px;
@@ -150,9 +121,7 @@ var myConfig = {
       }
 
       .att_btn-primary {
-        background-color: ` +
-    myConfig.ctaBgColor +
-    `;
+        background-color: #fff;
         max-width: 278px;
         min-width: 168px;
         text-align: center;
@@ -173,9 +142,7 @@ var myConfig = {
 
       a:hover {
         text-decoration: underline;
-        color: ` +
-    myConfig.ctaHoverColor +
-    `;
+        color: #071d49;
       }
 
       .legal {
@@ -242,9 +209,7 @@ var myConfig = {
 
       @media (min-width: 768px) {
         .att_hero {
-          background-image: url(` +
-    myConfig.img1 +
-    `);
+          background-image: url(https://www.lloydsbank.com/assets/media/car-finance/car_finance_banner_final_d_2x.jpg);
           background-position: 50%;
           background-repeat: no-repeat;
           background-size: cover;
@@ -256,9 +221,7 @@ var myConfig = {
         .att_hero_content {
           margin-left: 30px;
           zoom: 1;
-            background:  ` +
-    myConfig.bgColor +
-    ` ;
+          background:#005eb8;
           border-radius: 6px;
 
           /* padding: 20px 30px 30px; */

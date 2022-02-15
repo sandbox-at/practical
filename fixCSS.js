@@ -103,9 +103,9 @@ var myConfig = {
 
   var css =
     `
-      body {
-        box-sizing: border-box;
-      }
+    //   body {
+    //     box-sizing: border-box;
+    //   }
 
       .att_hero {
         background: none;
@@ -358,6 +358,12 @@ var myConfig = {
       .addEventListener("click", function () {
         budgetValue = document.querySelector("#budgetprice").value;
         x = localStorage.setItem("budgetValue", budgetValue);
+
+        depositValue = document.querySelector("#deposit").value;
+        depositData = localStorage.setItem("depositValue", depositValue);
+
+        termValue = document.querySelector("#repay").value;
+        budgetData = localStorage.setItem("termValue", termValue);
       });
     $(".minus-price").click(function () {
       var $input = $(this).parent().find("input");

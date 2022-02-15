@@ -2,38 +2,62 @@ var myConfig = {
   img1: "https://www.lloydsbank.com/assets/media/car-finance/car_finance_banner_final_d_2x.jpg",
   elementToReplace: ".hero-image",
   bgColor: "#005eb8",
+  headerText: "Car Finance",
+  subHeaderText:
+    "If you're a Halifax current account holder and want to buy a car, or switch your current car finance to us, it's simple.",
+  ctaText: "Get a quote",
+  ctaHoverColor: "#071d49",
+  ctaUrl: "https://secure.halifax-online.co.uk/personal/a/car_finance_hub/ ",
+  legalText: "Rates from 3.4% APR, No impact on your credit score",
+  ctaBgColor: "#fff",
+  label1: "Your monthly budget",
 };
 
 (function () {
-  var template = `<section class="att_hero">
+  var template =
+    `<section class="att_hero">
       <div class="att_hero_content">
-        <h1 class="att_header_text">Car Finance</h1>
+        <h1 class="att_header_text">` +
+    myConfig.headerText +
+    `</h1>
         <p class="att_sub_header_text">
-          If you're a Halifax current account holder and want to buy a car, or
-          switch your current car finance to us, it's simple.
+          ` +
+    myConfig.subHeaderText +
+    `
         </p>
-        <label for="budget">Your monthly budget</label>
+        <label for="budget">` +
+    myConfig.label1 +
+    `</label>
         <input type="text" id="budgetprice" value="£ 160" />
         <a
           class="att_btn att_btn-primary"
           data-selector="cta-item-"
-          href="https://secure.halifax-online.co.uk/personal/a/car_finance_hub/"
+          href=` +
+    myConfig.ctaUrl +
+    `
           itemprop="url"
           data-tealium-event="External Click"
           data-tealium-narrative="Get started here"
-          ><span class="btn-text" itemprop="name">Get a quote</span></a
+          ><span class="btn-text" itemprop="name">` +
+    myConfig.ctaText +
+    `</span></a
         >
-        <p class="legal">Rates from 3.4% APR, No impact on your credit score</p>
+        <p class="legal">` +
+    myConfig.legalText +
+    `</p>
       </div>
 
       <img
         class="att_hero_mobile_image"
-        src="https://www.lloydsbank.com/assets/media/car-finance/car_finance_banner_final_d_2x.jpg"
+        src=` +
+    myConfig.img1 +
+    `
         alt="bannerimgaes"
       />
     </section>`;
 
-  var css = `
+  var css =
+    `
       body {
         box-sizing: border-box;
       }
@@ -48,7 +72,9 @@ var myConfig = {
       }
 
       .att_hero_content {
-        background: #005eb8;
+        background: ` +
+    myConfig.bgColor +
+    `;
         max-width: 1100px;
         min-width: 0;
         padding: 10px 18px 10px;
@@ -75,7 +101,9 @@ var myConfig = {
         border-style: none;
       }
       .att_btn-primary {
-        background-color: #fff;
+        background-color: ` +
+    myConfig.ctaBgColor +
+    `;
         max-width: 278px;
         min-width: 168px;
         text-align: center;
@@ -94,7 +122,9 @@ var myConfig = {
       }
       a.att_btn:hover {
         text-decoration: underline;
-        color: #071d49;
+        color: ` +
+    myConfig.ctaHoverColor +
+    `;
       }
       .legal {
         margin-top: 3rem;
@@ -109,7 +139,9 @@ var myConfig = {
       }
       @media (min-width: 768px) {
         .att_hero {
-          background-image: url(https://www.lloydsbank.com/assets/media/car-finance/car_finance_banner_final_d_2x.jpg);
+              background-image: url(` +
+    myConfig.img1 +
+    `);
           background-position: 50%;
           background-repeat: no-repeat;
           background-size: cover;
@@ -120,7 +152,9 @@ var myConfig = {
         .att_hero_content {
           margin-left: 30px;
           zoom: 1;
-          background: #005eb8;
+          background: ` +
+    myConfig.bgColor +
+    `;
           border-radius: 6px;
 
           padding: 20px 30px 30px;
