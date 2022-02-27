@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Assignment CSS positioning</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        background: #fcba03;
+        width: 100%;
+        height: 400px;
+        color: white;
+      }
+
+      .one {
+        background-color: black;
+        width: 300px;
+        height: 300px;
+        position: relative;
+      }
+
+      .two {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        bottom: 0px;
+        left: 0px;
+        background-color: blue;
+      }
+      .three {
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        bottom: 0px;
+        right: 0px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="one">
+        <div class="two">
+          <div class="three"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
