@@ -1,0 +1,31 @@
+<style>
+    /* wnat to position box to center . Apply flex on body i.e direct parent of box element */
+    body{
+        display: flex;
+        justify-content: center;
+        /* Even with align-item : center boxy is not getting center aligned vertically because there is no height of the body.Set height of body */
+        align-items: center;
+        height: 100vh;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        background: gold;
+        /* element moves slowly while changing state and quicklywhile coming to origial position */
+        transition: transform 0.5s ease-in background;
+       
+
+    }
+    /* To validate transformations function ,use hover event */
+    .box:hover{
+        transform: rotate(30deg) scale(1.2) translate(40px);
+        /* When to use translate function if we can use relative and absolute positioning */
+        background:darkcyan;
+    }
+</style>
+
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, perspiciatis.
+    </div>
+</body>
