@@ -1,0 +1,41 @@
+<!-- Write a function that takes one parameter as input and print in console as:
+  If number divisble by 3 : print Fizz;
+  If number divisble by 5 : print Buzz
+  If number divisible by both 3 and 5 :print fizz Buzz
+  If number not divisible by 3 or 5 print number
+  If input is not of number type, print "Not a number"
+-->
+<script>
+
+function fizzBuzz(input){
+
+ if(typeof input!="number"  ) 
+ return "Not a number";
+
+  if(input %5 ==0 && input %3 ==0  )
+  return "FizzBuzz";
+
+ if (input %3 ==0) return "Fizz"; 
+ 
+
+  if (input %5 ==0) return "Buzz" 
+ 
+
+// No need to add not divisible condition as if above none of the condition met retun number
+  // if(input %5 !=0 || input %3 !=0  ) 
+  return input;
+
+
+
+ 
+
+ 
+
+
+}
+
+// function call
+  let output= fizzBuzz(20);
+//   To print in console
+  console.log(output);
+</script>

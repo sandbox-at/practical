@@ -1,0 +1,19 @@
+<!-- for of loop is used to access /iterate over arrays -->
+<script>
+// Create object
+const person={
+    name: "Mukund",
+    age: 28,
+    role:"SE"
+}
+// for in loop to access peroperty of person object
+for (let key in person) {
+    // Incorrect: this will show undefined as there is no property key under person object
+    console.log(key,person.key);
+
+    //Use bracket operator to access property and store in loop variable
+    console.log("Using bracket operator "+key,person[key])
+        
+    }
+
+</script>

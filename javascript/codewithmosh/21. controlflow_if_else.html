@@ -1,0 +1,26 @@
+<!-- Usecase: Display good morning if hour is between 6 AM t0 12PM 
+good afternoon if hour is between 12PM to 6 PM
+else good evening -->
+<!-- Algorithm:
+1. Calculate current hour
+2. Write if condition with current hour value
+3. Display message -->
+<div class="printer"></div>
+<script>
+var dateTimeStamp = new Date;
+var hour = dateTimeStamp.getHours();
+function greeting(hour){
+    if(hour>=6 && hour<12){
+    console.log("Good Morning!");
+}
+else if(hour=>12 && hour<18){
+console.log("Good Afternoon!");
+
+}
+else{
+    console.log("Good Evening!");
+}}
+
+greeting(hour);
+
+</script>
