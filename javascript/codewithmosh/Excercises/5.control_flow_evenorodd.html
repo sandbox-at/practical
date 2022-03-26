@@ -1,0 +1,23 @@
+<!-- Write a function that takes one parameter as input as number:
+  Upon user input it shows even or odd nu,bers from zero till the userinput
+ 
+-->
+<script>
+
+function showevenorodd(limit){
+ for(let i=0;i<=limit;i++){
+  //  Traditional code
+  //  if(i%2===0)
+  //  console.log("Even",i);
+  //  else
+  //  console.log("Odd",i)
+  
+  // Refined code
+  const message = (i%2===0)?'even':'odd';
+  console.log(i,message);
+ 
+ }
+}
+showevenorodd(110);
+
+</script>

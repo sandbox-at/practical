@@ -1,0 +1,25 @@
+<!--Wite a function,pass object as parameter
+  Print all the properties of object which are of string type
+ 
+-->
+<script>
+  const movie ={
+    name : "Raat Andheri",
+    director:"Rack Nok",
+    dated: 20/09/2021,
+    rating : 5
+
+  };
+  
+function showProperties(obj){
+  //To iterate object use for in loop
+  for(let key in obj){
+    if(typeof obj[key] === 'string')
+    console.log(key, obj[key]);
+  }
+
+}
+showProperties(movie);
+
+
+</script>

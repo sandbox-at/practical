@@ -1,0 +1,18 @@
+<script>
+    const marks =[80, 85,90]
+    function calculateGrade(marks){
+        let total=0;
+       
+        for(let key of marks){
+            total=total+key;
+            let average= total/marks.length;
+             console.log(average);
+            if((total/marksNumber)>90){
+                return 'A';
+            }
+           
+        }
+
+    }
+    console.log(calculateGrade(marks))
+</script>

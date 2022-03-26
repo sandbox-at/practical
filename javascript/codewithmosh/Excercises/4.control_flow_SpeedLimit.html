@@ -1,0 +1,22 @@
+<!-- Write a function that takes one parameter as input as speed:
+  Speed lees than 70kmph is OK;
+  For every 5km/hr increase in speed it will add 1 point
+  License will be suspended for 12 points or more
+ 
+-->
+<script>
+
+function checkSpeed(speed){
+const speedLimit= 70;
+const kmPerPoint= 5;
+ if(speed <=speedLimit  ) 
+ console.log("OK") ;
+else{
+  let point=Math.floor((speed-speedLimit)/kmPerPoint)
+if (point>12){console.log("License Cancelled")} else{
+  console.log("points",point);
+}}
+}
+
+ checkSpeed(110);
+</script>
