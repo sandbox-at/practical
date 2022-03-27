@@ -1,18 +1,43 @@
+<!-- Print grade
+If avergae marks > 90 : A Grade
+avergae marks > 80 : B Grade
+avergae marks >30 and less than 80 : C Grade
+average marks less than 30 then D Grade
+Algorithm:
+1. Create function and take user input as array says marks
+2. Iterate through the Arrray loop using for..of loop . loop variable will store the value and increment it to total variable value
+3. Verify total and close the loop
+4. calculate average by total marks/number of array item(array.length)
+Write if condition and print the respective grade
+ -->
 <script>
-    const marks =[80, 85,90]
+
+    
     function calculateGrade(marks){
         let total=0;
-       
+       console.log(total);
         for(let key of marks){
             total=total+key;
-            let average= total/marks.length;
-             console.log(average);
-            if((total/marksNumber)>90){
-                return 'A';
+            console.log("total marks",total);}
+            //Closed for loop above to return last/final total and calculate avaerage. If for loop will be opened then average and all other code will execute multiple times which only want to excecute once. Only for loop should pick the value from marks array and keep appending to total
+            let average=Math.floor(total/marks.length) ;
+             console.log("Average Marks",average);
+            if((average)>90){
+                return 'A Grade';
+            }
+            else if((average)>80){
+                return 'B Grade';
+            }
+             else if((average)>30 && (average)<80){
+                return 'C Grade';
+            }
+            else{
+                return 'D Grade';
             }
            
-        }
+        
 
     }
+    const marks =[30, 85,90]
     console.log(calculateGrade(marks))
 </script>
