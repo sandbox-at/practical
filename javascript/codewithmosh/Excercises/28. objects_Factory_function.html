@@ -1,0 +1,22 @@
+ <!-- Factory function produces object by returning object in function
+Factory function is used when need to write to multiple objects but related properties i.e Fan1 and Fan2 are two objects with key value pais so should not have two object Fan1 and Fan2 and duplicate same key value pairs in both objects
+ Also, pass value in key value pair as parameter or variable to update it run time
+If key and value in object is same then pass only key
+In a factory function/object section draw:function{} is same as draw(){} -->
+<script>
+// Factory Function : produce objects
+function createCircle(radius){
+    return {
+        radius,
+        draw(){
+            console.log('Draw circle');
+        }
+    };
+}
+// Product circle1 object
+
+circle1 = createCircle(2);
+console.log(circle1)
+//Access draw function of circle1 object
+console.log(circle1.draw());
+</script>

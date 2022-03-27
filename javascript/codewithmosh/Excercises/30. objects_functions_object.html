@@ -1,0 +1,14 @@
+ <!--Functions are object. Validate it by typing function name and dot operator-->
+<script>
+// constructor Function : instantiate empty objects and adds property or method
+function Circle(radius){
+    this.radius =radius,
+        this.draw=
+        function draw(){
+            console.log('Draw circle');
+        }
+    }
+const another= new Circle(1);
+another.draw;
+
+</script>

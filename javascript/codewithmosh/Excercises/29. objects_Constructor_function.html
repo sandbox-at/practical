@@ -1,0 +1,24 @@
+ <!-- Constructor function, creates objects using constructor  function
+constructor function name starts with UpperCase
+this keyword creates empty object
+this.propertyname adds/sets property to the empty created object
+this camn also be used to pass method with dot operator
+While creating new object, instantiate it with new keyword during function call e.g new ConstructorFunctionName(parameter) ;-->
+<script>
+// constructor Function : instantiate empty objects and adds property or method
+function Circle(radius){
+    this.radius =radius,
+        this.draw=
+        function draw(){
+            console.log('Draw circle');
+        }
+    }
+
+// Instatantiate circle1 object and pass property and method from constructor function
+
+const circle1 = new Circle(2);
+console.log(circle1)
+//Access draw function of circle1 object
+console.log(circle1.draw());
+
+</script>
