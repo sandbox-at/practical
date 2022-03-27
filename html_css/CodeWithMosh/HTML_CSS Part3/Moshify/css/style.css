@@ -31,6 +31,48 @@ h2{font-size: 4rem;}
 h3{font-size: 3rem;
     /* To add space between paragraph and h3 element */
 }
+a{
+     /*Remove underline fro links */
+    text-decoration: none;}
+.link-arrow{
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+  
+
+
+}
+/* Implement arrow icon use pseudo elemt ::after */
+.link-arrow::after{
+    content: "-->";
+    /* Adding in px to have same space between text and arrow irrespective of screen size */
+    margin-left: 5px;
+      /* transition get applied on lement and not state */
+      transition: margin 0.15s;
+}
+/* On arrow hover .move arrow icon to right */
+.link-arrow:hover::after{
+    margin-left: 10px;
+}
+/* Impment Badge */
+.badge{
+    border-radius: 20px;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    /* disable wrapping of text in badge */
+    white-space: nowrap;
+}
+
+/* Add skin to badge */
+.badge--primary{
+    background: var(--color-accent);
+    color: #fff;
+}
+.badge--secondary{
+    background: var(--color-secondary);
+    color: #fff;
+}
 
 /* For desktop */
 @media screen and (min-width:1024px) {
