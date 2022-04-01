@@ -1,0 +1,31 @@
+<!-- Create address object with properties street,city,zip code
+Write a factory functionand constructor function to create Address object with all properties-->
+<script>
+
+
+// Constructor Function upper case
+let address1=new Address("Nagar Haveli","Rajasthan",398002);
+let address2=new Address("Nagar Haveli","Rajasthan",398002);
+function Address(street,city,zip){
+    this.street =street;
+    this.city =city;
+    this.zip =zip;
+
+}
+
+// check if both ojects properties are equal
+function areEqual(address1,address2){
+
+    return address1.street===address2.street && address1.city===address2.city && address1.zip===address2.zip;
+
+    
+}
+console.log(areEqual(address1,address2));
+
+//Check if it's same object
+function areSame(address1,address2){
+    return address1 ===address2;
+
+}
+console.log(areSame(address1,address2));
+</script>
