@@ -1,0 +1,40 @@
+<!-- Create blog post object using title,body,author,views,comments(author,body),isLive(true or False)-->
+<script>
+const blogpost ={
+    title: "Artifical intelligence and future",
+    body: "The day will change when AI will full fledged adopted for every day life",
+    author: "Rack Sen",
+    views: 1003,
+    comments:[{
+        author: "Bal Mukund",
+        body:"Yes, this is very true"
+    },
+    {
+        author: "Barnali",
+        body:"Lets see"
+    },
+    {
+        author: "Briti",
+        body:"Yes, I can watch this"
+    }
+] ,
+isLive:true
+};
+
+// Write a constructor function for blog post which is not yet published. Aim to write function with fewer parameter. 
+//isLive will be false intially , no comments initially and no view initially so no need to pass this as parameters
+
+function Post(title,body,author){
+    this.title=title;
+    this.body=body;
+    this.author=author;
+    this.views=0;
+    this.comments=[];
+    this.isLive=false;
+
+}
+
+let post1= new Post('Strategy','Right time to discuss as no more conventions are applicable','Bal Mukund')
+console.log(post1);
+
+</script>
