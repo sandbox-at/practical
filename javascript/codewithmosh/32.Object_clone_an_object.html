@@ -1,0 +1,24 @@
+<!-- Clone object -->
+<script>
+const circle ={
+    radius : 2,
+    draw(){
+        console.log("draw circle");
+    }
+};
+// Cloning object using three dots or bread method
+// const another={...circle};
+
+//Cloning object using assign method
+
+ let another = Object.assign({},circle)
+
+//Traditional way to clone object
+// const another ={};
+// for (let key in circle) {
+//     another[key] = circle[key];
+    
+// }
+
+console.log(another);
+</script>

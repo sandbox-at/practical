@@ -1,0 +1,19 @@
+<!-- Create address object with properties street,city,zip code
+Write a function showAddress(address) to display Address with all properties-->
+<script>
+
+let address= {
+    street : "24 street main",
+    city: "Bangalore",
+    zip: 560037
+};
+function showAddress(address){
+    for (const key in address) {
+        console.log(key,address[key])
+    }
+    
+
+   
+}
+showAddress(address);
+</script>

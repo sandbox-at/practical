@@ -1,0 +1,32 @@
+<!-- Create address object with properties street,city,zip code
+Write a factory functionand constructor function to create Address object with all properties-->
+<script>
+
+let address= createAddress("24 street main","Mumbai",43002)
+
+// Factory Function, camel Notitatopn
+
+function createAddress(street,city,zip){
+    return{
+    street : street,
+    city:city,
+    zip: zip
+};
+}
+console.log(address);
+
+
+// *************--------------------------------
+
+// Constructor Function upper case
+let address1=new Address("Nagar Haveli","Rajasthan",398002)
+function Address(street,city,zip){
+    this.street =street;
+    this.city =city;
+    this.zip =zip;
+
+}
+console.log(address1);
+
+
+</script>

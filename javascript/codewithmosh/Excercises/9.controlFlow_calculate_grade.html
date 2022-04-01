@@ -14,14 +14,11 @@ Write if condition and print the respective grade
 
     
     function calculateGrade(marks){
-        let total=0;
-       console.log(total);
-        for(let key of marks){
-            total=total+key;
-            console.log("total marks",total);}
+        // Calling calculateAverage function inside calculateGrade function
+      const average = calculateAverage(marks);
+      console.log("Average Marks",average);
             //Closed for loop above to return last/final total and calculate avaerage. If for loop will be opened then average and all other code will execute multiple times which only want to excecute once. Only for loop should pick the value from marks array and keep appending to total
-            let average=Math.floor(total/marks.length) ;
-             console.log("Average Marks",average);
+            
             if((average)>90){
                 return 'A Grade';
             }
@@ -38,6 +35,17 @@ Write if condition and print the respective grade
         
 
     }
-    const marks =[30, 85,90]
+    function calculateAverage(array){
+          let total=0;
+      
+        for(let key of array){
+            total=total+key;
+            }
+             console.log(total);
+       return Math.floor(total/array.length) ;
+        
+
+    }
+    const marks =[90, 95,90]
     console.log(calculateGrade(marks))
 </script>
