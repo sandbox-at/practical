@@ -1,0 +1,14 @@
+<!-- Array , Find reference type element in arrray e.g: object inside array-->
+<script>
+    const movie = [
+      {id:1,name:"Raat Andheri"},
+      {id:2,name:"Din ujala"},
+    ];
+
+    // TO find referencetype element we can not use indexOf() . Use find() or findIndex() instead
+    const findElement =movie.findIndex(function(movie){
+      return movie.name==="Din ujala";
+    });
+    console.log(findElement);
+ 
+</script>

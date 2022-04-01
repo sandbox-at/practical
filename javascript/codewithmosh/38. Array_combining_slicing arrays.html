@@ -1,0 +1,25 @@
+<!-- Array , combining and slicing of array-->
+<script>
+    const first = [1,2,3];
+    const second = [4,5,6];
+
+    // Combine first and second array using concat
+
+   let combined= first.concat(second);
+
+    console.log(combined);
+
+    const slice=combined.slice(2,4);
+    console.log(slice);
+
+    const slice1=combined.slice(2);
+    console.log(slice1);
+
+    const slice2=combined.slice(6);
+    console.log(slice2);
+// Using spread operator
+  const combinedUsingSpread= [...first,...second]
+  console.log("using spread method",combinedUsingSpread);
+
+
+</script>
