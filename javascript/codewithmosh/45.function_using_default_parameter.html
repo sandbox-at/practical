@@ -1,0 +1,18 @@
+<script>
+   // Pass default value as parameter. Usecase calculate simple interest. If want to set rate as default value in case rate value is not passed at run time
+// Approach 1
+   // function interest(principle,rate,time){
+   //    rate=rate || 3.5;
+   //    time = time || 5;
+   //   let interestAmount=.1*(principle*rate*time);
+   // return interestAmount;}
+
+//   Approach 2: Passing default parameter in parameter itself as equal
+   function interest(principle,rate=3.5,time=5){
+     let interestAmount=.1*(principle*rate*time);
+   return interestAmount;}
+     
+   console.log(interest(1000,2));
+</script>
+
+

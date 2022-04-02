@@ -1,0 +1,25 @@
+<script>
+   // For method , this reference to object
+   // For function, this reference to global window object
+
+   const movie={
+      title:"a",
+      play(){
+         console.log(this);
+      }
+     
+   };
+   movie.stop=function(){
+      console.log(this);
+   };
+ movie.play();
+ movie.stop();
+
+//  Regular function
+function playVideo(){
+   console.log(this);
+}
+playVideo();
+</script>
+
+

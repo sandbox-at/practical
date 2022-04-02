@@ -1,0 +1,16 @@
+<script>
+   // color is not definied inside block i.e this has global scope and can be accessed anywheere
+   // Best practice : Avoid defining global variable
+   const color= red;
+   for (let index = 0; index < 10; index++) {
+  //index local scope i.e only accessible within for loop
+   console.log(index);
+   
+}
+{const name=raj;}
+// name is only accessible within block,can't access outside
+console.log(name);
+
+</script>
+
+
