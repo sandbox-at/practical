@@ -1,0 +1,14 @@
+<script>
+    // Map array element to html list item use map to read element and using callback wrap it with html list item
+const numbers = [2,1,3,5];
+
+const item =numbers.map(function(n){
+    return '<li>' +n+'</li>'
+    
+});
+console.log(item);
+// Join the item and wrap it with <ul>
+const html='<ul>'+ item.join('')+'<ul>';
+console.log(html);
+</script>
+
