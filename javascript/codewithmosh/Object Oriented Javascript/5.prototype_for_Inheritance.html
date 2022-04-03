@@ -1,0 +1,30 @@
+<!-- Proprtotype: means parent. For inherticance, you can use all the methods defined in parent . E.g: In console all the method defined for prototype can be used in object -->
+<script>
+// let x={a:1,b:2};
+
+// // In console , it will display proto as object. Use some of its methid defined in prototype
+// x.toString()
+// console.log(x);
+
+// let myArray=[];
+// console.log(myArray);
+
+// If want to define method once and use it multiple times, set prototype of object/constructor and attach the method to prototype instead of adding in object
+function Circle(radius){
+
+    // Instance member
+    this.radius=radius;
+
+}
+
+//Set prototype of Circle and add draw method . Calles as prototype member
+Circle.prototype.draw= function(){
+    console.log('draw');
+}
+
+// Verify circle object , it's prototype should have draw method and it can be reused/accessed as inheritance
+const c1=new Circle(2);
+const c2=new Circle(3);
+console.log(c1.draw());
+console.log(c2.draw());
+</script>

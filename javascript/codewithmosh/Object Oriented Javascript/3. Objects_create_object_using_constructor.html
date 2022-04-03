@@ -1,0 +1,16 @@
+<script>
+    //Constuctor, function name should be in uppercase,needs to pass values and use new operator to create new object. No return statement needed . Call will happen when call with new operator
+
+    function CreateCircle(radius){
+            this.radius = radius;
+            this.draw=function(){
+                console.log('draw');
+                console.log(this);
+            };
+
+        
+    }
+// Pass parameter to crate objects
+const circle =new CreateCircle(2);
+circle.draw();
+</script>

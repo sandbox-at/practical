@@ -1,0 +1,29 @@
+<!-- Iterate instance member vs prototype member
+Object.keys only returns instance members
+for..in loop returns all the member (i.e instance members(hasOwnProperty) or prototype members)-->
+<script>
+// If want to define method once and use it multiple times, set prototype of object/constructor and attach the method to prototype instead of adding in object
+function Circle(radius){
+
+    // Instance member
+    this.radius=radius;
+
+}
+
+//Set prototype of Circle and add draw method . Calles as prototype member
+Circle.prototype.draw= function(){
+    console.log('draw');
+}
+
+// Verify circle object , it's prototype should have draw method and it can be reused/accessed as inheritance
+const c1=new Circle(2);
+const c2=new Circle(3);
+console.log(c1.draw());
+console.log(c2.draw());
+
+// Check if property is instance member or prototype member using hasOwnProperty
+console.log(c1.hasOwnProperty('radius'));
+console.log(c1.hasOwnProperty('draw'));
+
+
+</script>

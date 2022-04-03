@@ -1,0 +1,19 @@
+<script>
+    //If need to duplicate property or method of object,use factories instead of object literal syntax. This returns or generates object. Create once and replicate the multiple object just by passing the parameter at run time
+
+    function createCircle(radius){
+        // return entire objects
+        return {
+            // radius:radius can be written as radius as key and value is same
+            radius,
+
+            draw:function(){
+                console.log('draw');
+            }
+
+        };
+    }
+// Pass parameter to crate objects
+const circle =createCircle(2);
+circle.draw();
+</script>

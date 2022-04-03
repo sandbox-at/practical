@@ -1,0 +1,22 @@
+<!-- Proprtotype descriptor to get property details -->
+<script>
+let person={name:'Mukund'}
+// let objectBase= Object.getPrototypeOf(person);
+// let descriptor = Object.getOwnPropertyDescriptor(objectBase,'toString');
+// console.log(descriptor);
+// User defineProperty method to add getter and setter of the property
+Object.defineProperty(person,'name',{
+    //Set attributes read only
+    writable:false,
+
+    //Will not show up in Object.keys
+    enumerable:false,
+
+    //Can not delete property, if configurable set to false
+    configurable:false
+});
+
+// Verify if name attribute can be modified or not as writable set to false using defineProperty. It will not change
+person.name ='Trying to change';
+console.log(person);
+</script>
