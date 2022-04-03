@@ -1,0 +1,48 @@
+<!-- Inheritance can make program more complex if it is more than a level .Use composite way instead i.e create each features or function separately in object and assign it to empty object
+and form new classes with relevant property and methods-->
+<script>
+    // Feature1 in canEat object
+const canEat={
+    eat:function(){
+        this.hunger--;
+        console.log('eating');
+    }
+};
+
+//Feature 2 in canWalk object
+const canWalk={
+    walk:function(){
+        console.log('walking');
+    }
+};
+
+//Feature 3 in canSwim object
+const canSwim={
+     swim:function(){
+         console.log('swimming')
+     }
+};
+
+// Copy all features to person instance of object and assign name as person
+const person= Object.assign({},canEat,canWalk);
+console.log(person);
+
+// Or Create constructor function 
+function Person1(){
+
+}
+ Object.assign(Person1.prototype,canEat,canWalk);
+ const person1= new Person1();
+
+ console.log("using constructor function",person1);
+
+ //Create constructor for golodfish
+ function goldFish(){
+    };
+
+    Object.assign(goldFish.prototype,canEat,canSwim);
+  goldFish= new goldFish();
+
+  console.log(goldFish);
+
+</script>
