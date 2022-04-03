@@ -78,7 +78,61 @@ a{
     font-size: 1.6rem;
 }
 
+/* Adding list */
+.list{
+    list-style: none;
+    padding-left: 0;
+    color: var(--color-heading);
+}
+.list--inline .list__item{
+    display: inline-block;
+    margin-right: 2rem;
+}
+/* To add icon */
+.list--tick{
+    list-style-image: url(../img/tick-svgrepo-com.svg);
+    padding-left: 3rem;
+}
 
+/* Cards  */
+.card{
+    border-radius:7px;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    /* Overflow hidden as background color of card header is overflowing round corner */
+    overflow: hidden;
+}
+.card__header,.card__body{
+    padding: 2rem 3rem;
+}
+.card--primary .card__header{
+    background:var(--color-primary);
+    color: white;
+
+}
+.card--secondary .card__header {
+    background: var(--color-secondary);
+    color: white;
+
+}
+.card--secondary .badge--secondary{
+    background: #02cdf1;
+}
+.plan__name{
+    color:white;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+
+.plan__price{
+    font-size: 6rem;
+}
+
+.plan__billing-cycle{
+    font-size: 2.4rem;
+    font-weight: 300;
+    opacity:0.8
+}
 /* For desktop */
 @media screen and (min-width:1024px) {
     
