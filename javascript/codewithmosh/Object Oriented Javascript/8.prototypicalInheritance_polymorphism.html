@@ -1,0 +1,15 @@
+<script>
+    function Square(){
+ }
+ extend(Square,Shape);
+
+ Square.prototype.duplicate=function(){
+     CONSOLE.console.log(('DUPLICATE SQUARE'));
+ }
+ const shapes =[
+     new Circle(),
+     new Square()
+ ];
+ for(let shape of shapes)
+    shape.duplicate();
+</script>

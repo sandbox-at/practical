@@ -1,0 +1,29 @@
+<script>
+  class CreateCircle {
+    constructor(radius) {
+      this.radius = radius;
+
+   
+    }
+
+
+    //Instance method accessible at object level ,check it console it will appear for obj1
+
+    draw() {
+      console.log(this.radius);
+    }
+
+    //Static method is accessible at the class level bu not at object level
+    static parse(str){
+      const radius=JSON.parse(str).radius;
+      return new Circle(radius);
+    }
+
+
+    
+  }
+ const circle =Circle.parse('{"radius"}')
+  let obj1 = new CreateCircle(2)
+
+  console.log(obj1, obj1.draw())
+</script>

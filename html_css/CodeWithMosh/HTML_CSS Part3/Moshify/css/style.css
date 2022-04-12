@@ -76,6 +76,7 @@ a{
 }
 .badge--small{
     font-size: 1.6rem;
+    padding:0.5rem 1.5rem;
 }
 
 /* Adding list */
@@ -99,6 +100,7 @@ a{
     border-radius:7px;
     box-shadow: 0 0 20px 10px #f3f3f3;
     /* Overflow hidden as background color of card header is overflowing round corner */
+    width: 40%;
     overflow: hidden;
 }
 .card__header,.card__body{
@@ -131,7 +133,41 @@ a{
 .plan__billing-cycle{
     font-size: 2.4rem;
     font-weight: 300;
-    opacity:0.8
+    opacity:0.8;margin-right: 1rem;
+}
+.plan__description{
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    /* TO appear in new line */
+    display: block;
+}
+.plan .list__item{
+    margin-bottom: 2rem;
+}
+.plan--popular .card__header{
+    position: relative;
+}
+.plan--popular .card__header::before{
+    content: url(../img/popular.svg);
+    /* Added display:inline-block to add width to the icon */
+    display: inline-block;
+    width: 40px;
+    /* Question: how do we know what position to apply and why are we using pseudo class. As the below can be done by either position:relative or absolute */
+    /* Ans: If element to appear in respect of parent go for absolute position for element and relative position for parent */
+    /* Incorrect */
+    /* position: relative;
+    left: 650px;
+    top:-30px; */
+    /* Incorrect ends*/
+    /* Correct . Now change the screen size but icon would contain in container and at same position*/
+    position: absolute;
+    right: 10px;
+    top:-10px;
+
+    /* Correct */
+    
+    /* Relative position mean : relative to the same element as it appear default. So top right bottom,left will start from element default position */
 }
 /* For desktop */
 @media screen and (min-width:1024px) {

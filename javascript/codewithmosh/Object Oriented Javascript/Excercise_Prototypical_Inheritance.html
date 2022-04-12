@@ -1,0 +1,26 @@
+<!-- Create a function  -->
+<script>
+    // Constructor function
+    function HTMLElement(){
+        this.click=function(){
+            console.log('clicked');
+        }
+    }
+    HTMLElement.prototype.focus=function(){
+        console.log("focussed");
+    }
+    // In ES6,initialize parameter as array
+    function HTMLSelectElement(items=[]){
+        this.items=items;
+   
+    this.addItem =function(item){
+        this.items.push(item);
+
+    }
+    this.removeItem=function(item){
+        this.items.splice(this.items.indexOf(item),1);
+    }
+}
+HTMLSelectElement.prototype=Object.create(HTMLElement.prototype);
+
+</script>

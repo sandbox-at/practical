@@ -1,16 +1,47 @@
 <script>
-    //Constuctor, function name should be in uppercase,needs to pass values and use new operator to create new object. No return statement needed . Call will happen when call with new operator
+    //Constuctor, function name should be in uppercase,needs to pass values and use new operator to create new object. No return statement needed . Call will happen when call with new operator. If we do not add any value in this.variable name in cosntructor function for variable declaration then it will not be returned as object property.
 
-    function CreateCircle(radius){
+    function CreateCircle(radius, elm){
+            let name = 'dfdf'
             this.radius = radius;
-            this.draw=function(){
-                console.log('draw');
-                console.log(this);
-            };
+            this.draw = function(){
+                console.log(this.radius, name);
+            };   
 
-        
+            this.animation = function (){
+                setTimeout(()=>{
+                    elm.style.color = red
+                }, 1000)
+
+                setTimeout(()=>{
+                    elm.style.color = blue
+                }, 2000)
+                
+            }
     }
+
+
+CreateCircle.prototype.myUniqFunc = function() { console.log("Hi my radius is ", this.radius) }
+
+
 // Pass parameter to crate objects
-const circle =new CreateCircle(2);
-circle.draw();
+const circle = new CreateCircle(2);
+
+const circle2 = new CreateCircle(4);
+
+
+
+console.log(circle, circle2)
+
+console.dir(CreateCircle)
+
+
+
+
+
+
+
+
+
+
 </script>
