@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Inheritance</title>
+</head>
+<body>
+    <script>
+     class Shape{
+         constructor (color){
+             this.color=color;
+         }
+         move(){
+             console.log('move');
+         }
+
+     }
+     class Circle extends Shape{
+         constructor(color,radius){
+             super(color);
+             this.radius=radius;
+         }
+          draw(){
+             console.log('draw');
+         }
+     }
+     const c=new Circle('red', 2);
+    </script>
+</body>
+</html>

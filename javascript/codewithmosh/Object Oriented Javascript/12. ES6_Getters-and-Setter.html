@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Convention to define private property i.e start with underscore
+     const _radius= new WeakMap()
+    
+
+        class Circle{
+    constructor(radius){
+        _radius.set(this,radius);
+        
+    }
+   //Getter , access like roperty
+   get radius(){
+       return _radius.get(this);
+   }
+
+//    Setter
+set radius(value){
+    if(value<=0) throw new Error('invalid radius');
+    _radius.set(this,value);
+}
+
+}
+const c= new Circle(1);
+
+
+    </script>
+</body>
+</html>
