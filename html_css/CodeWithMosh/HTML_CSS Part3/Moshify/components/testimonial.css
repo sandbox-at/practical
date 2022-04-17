@@ -1,0 +1,28 @@
+/* Grids */
+/* For smaller screen display one div below other */
+.grid {
+    display: grid;
+}
+
+/* For laptop screen display div after after other side by side */
+@media screen and (min-width: 768px) {
+    .grid--1x2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+.testimonial{
+    padding: 3rem;
+}
+.testimonial__image{
+    position:relative;
+}
+
+.testimonial__image >img{
+    width: 100%;
+}
+.testimonial__image>.icon-container {
+    position: absolute;
+    top: 3rem;
+}

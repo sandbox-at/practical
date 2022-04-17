@@ -1,0 +1,63 @@
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.block--skewed-left {
+    padding-bottom: calc(var(--padding-vertical) +4rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+/* Grids */
+/* For smaller screen display one div below other */
+.grid {
+    display: grid;
+}
+
+/* For laptop screen display div after after other side by side */
+@media screen and (min-width: 1024px) {
+    .grid--1x2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+.block--dark {
+    background: #000;
+    color: #7b858b;
+}
+
+hero__tagline{
+    font-size: 2rem;
+    color: #b9c3cf;
+    letter-spacing: 1px;
+    margin: 2rem 0 5rem;
+}
+.hero__image{
+    width: 100%;
+}
+.block__heading{
+    font-size: 4rem;
+}
+
+
+.btn {
+    padding: .5rem 2rem 2rem .5rem;
+    border-radius: 10px;
+}
+
+.btn--accent {
+    background: red;
+    color: #fff;
+}
+
+@media screen and (min-width:768px) {
+    .hero{
+        padding-top: 0;
+    }
+    .hero__content{
+        text-align: left;
+        align-self: center;
+    }
+    
+}

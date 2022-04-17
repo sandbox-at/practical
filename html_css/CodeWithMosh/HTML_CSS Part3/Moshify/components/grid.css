@@ -1,0 +1,18 @@
+/* Grids */
+/* For smaller screen display one div below other */
+.grid{
+    display: grid;
+}
+
+/* For laptop screen display div after after other side by side */
+@media screen and (min-width: 1024px)  {
+    .grid--1x3{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+
+.block--dark{
+    background: #000;
+    color: #7b858b;
+}

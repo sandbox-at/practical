@@ -1,0 +1,21 @@
+.callout{
+    padding: 4rem;
+    border-radius: 5px;
+}
+
+.callout--primary{
+    background: red;
+    color: #fff;
+}
+
+.btn-secondary{
+    background: green;
+    border-radius: 10px;
+    
+}
+.grid {
+    display: grid;
+}
+.grid--1x2 {
+    grid-template-columns: 1fr 1fr;
+} 
