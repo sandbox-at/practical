@@ -1,0 +1,48 @@
+<style>
+    p{
+        background-image: url(https://images.unsplash.com/photo-1650147047732-94472004df83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+        background-repeat: no-repeat;
+        width: 1000px;
+        min-height: 40vh;
+        
+    }
+    ul{
+        background-color: antiquewhite;
+        color: aliceblue;
+    }
+</style>
+
+    
+
+<div>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quisquam natus voluptas fuga doloremque obcaecati esse eius maiores vel, dignissimos debitis quod ratione error. Obcaecati, magnam nobis? Eius, debitis quam.</p>
+    <ul>
+        <li>Grocery</li>
+        <li>Fruits</li>
+        <li>Stationery</li>
+    </ul>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+//     $(document).ready(() => {
+//     // All jQuery statements go here
+//     $('body').append('<h3>Document ready!</h3>')
+//     console.log("jquery Added");
+//   });
+// Another way to write document ready
+$(function(){
+    // All jQuery statements go here
+    $('p').append('<h3>Document ready!</h3>');
+    $('p').prepend('<h1 style="color:red;">Prepending element to paragraph </h1>');
+    $('p').wrap('<div class="container"></div>');
+    $('ul').css("background-color","red");
+    // For ,ultiple property updated through .css use object literal syntax
+    $('ul').css({"background-color": "yellow", "font-size": "200%"});
+$("p").click(function(){
+  $(this).hide();
+});
+    
+
+})
+</script>

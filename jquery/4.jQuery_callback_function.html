@@ -1,0 +1,45 @@
+<!-- A callback function is executed after the current effect is 100% finished. 
+JavaScript statements are executed line by line. However, with effects, the next line of code can be run even though the effect is not finished. This can create errors.
+To prevent this, you can create a callback function.
+A callback function is executed after the current effect is finished.
+
+Typical syntax: $(selector).hide(speed,callback);-->
+<style>
+    p{
+        background-image: url(https://images.unsplash.com/photo-1650147047732-94472004df83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+        background-repeat: no-repeat;
+        width: 1000px;
+        min-height: 40vh;
+        
+    }
+    ul{
+        background-color: antiquewhite;
+        color: aliceblue;
+    }
+</style>
+
+    
+
+<div>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quisquam natus voluptas fuga doloremque obcaecati esse eius maiores vel, dignissimos debitis quod ratione error. Obcaecati, magnam nobis? Eius, debitis quam.</p>
+    <ul>
+        <li>Grocery</li>
+        <li>Fruits</li>
+        <li>Stationery</li>
+    </ul>
+    <button>Click Me</button>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    $(function(){
+        $('button').click(function(){
+            //alert will fire using callback function only if slideToggle method is executed successfully.
+
+            $("p").slideToggle("slow",function(){
+                alert("Slide toggle completed")
+
+            });
+        })
+    });
+</script>
