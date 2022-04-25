@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax html</title>
+</head>
+<body>
+    <p></p>
+    <div></div>
+    <script>
+        const xhr = new XMLHttpRequest();
+        // xhr.open('GET','ajax.txt',true);
+          xhr.open('GET','ajaxcontent.html',true);
+       
+        xhr.onprogress=function(){
+            console.log("Loading");
+        }
+
+        xhr.onload=function(){
+         
+            // document.querySelector('p').textContent = this.responseText;
+
+             document.querySelector('div').innerHTML = this.response;
+        }
+        xhr.send();
+    </script>
+</body>
+</html>
