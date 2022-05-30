@@ -1,0 +1,28 @@
+<ul>
+  <li>The</li>
+  <li>test</li>
+</ul>
+<ul>
+  <li>has</li>
+  <li>passed</li>
+</ul>
+<script>
+  let elements = document.querySelectorAll('ul > li:last-child');
+
+  for (let elem of elements) {
+    alert(elem.innerHTML); // "test", "passed"
+  }
+
+
+</script>
+<div>Hello, world!</div>
+
+<script>
+  let div = document.querySelector('div');
+
+  // replace div.outerHTML with <p>...</p>
+  div.outerHTML = '<p>A new element</p>'; // (*)
+
+  // Wow! 'div' is still the same!
+  alert(div.outerHTML); // <div>Hello, world!</div> (**)
+</script>

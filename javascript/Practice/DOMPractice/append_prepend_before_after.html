@@ -1,0 +1,33 @@
+<!-- Here we called append on document.body, but we can call append method on any other element, to put another element into it. For instance, we can append something to <div> by calling div.append(anotherElement).
+
+Here are more insertion methods, they specify different places where to insert:
+
+node.append(...nodes or strings) – append nodes or strings at the end of node,
+node.prepend(...nodes or strings) – insert nodes or strings at the beginning of node,
+node.before(...nodes or strings) –- insert nodes or strings before node,
+node.after(...nodes or strings) –- insert nodes or strings after node,
+node.replaceWith(...nodes or strings) –- replaces node with the given nodes or strings.
+Arguments of these methods are an arbitrary list of DOM nodes to insert, or text strings (that become text nodes automatically).
+
+Let’s see them in action.
+
+Here’s an example of using these methods to add items to a list and the text before/after it: -->
+
+<ol id="ol">
+  <li>0</li>
+  <li>1</li>
+  <li>2</li>
+</ol>
+
+<script>
+  ol.before('before'); // insert string "before" before <ol>
+  ol.after('after'); // insert string "after" after <ol>
+
+  let liFirst = document.createElement('li');
+  liFirst.innerHTML = 'prepend';
+  ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
+
+  let liLast = document.createElement('li');
+  liLast.innerHTML = 'append';
+  ol.append(liLast); // insert liLast at the end of <ol>
+</script>
