@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<script>
+"use strict";
+
+let user = {
+  name: "John",
+  age: 30,
+  "multiword property": "validate"
+};
+
+// let key = prompt("What do you want to know about the user?", "age");
+let check = "name";
+// let propertyCheck= user.multiword property; //throws error  as it will try to find multiword in user
+let propertyCheck= ["multiword property"];
+
+
+
+// access by variable
+ alert( user[check]); // John (if enter "name")
+ alert( user[propertyCheck]); //Work
+</script>
+
+<!-- Question1 : check variable defined out of user object scope and also passed name as string , then how can I access name:John in alert. -->
