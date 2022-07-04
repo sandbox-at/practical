@@ -1,0 +1,13 @@
+<!-- dispatchEvent is to pass the event along with and gets executed without user doing an even e.g: click or any other event.
+Custom event can also be dispatched. -->
+<button id="elem">Autoclick</button>
+
+<script>
+     let elem=document.querySelector('#elem');
+     elem.addEventListener('click',function(){
+    console.log("Element clicked");
+  })
+  let event = new Event("click");
+  elem.dispatchEvent(event);
+
+</script>

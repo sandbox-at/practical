@@ -1,0 +1,47 @@
+<!-- Colored clock with setInterval
+21:42:50 -->
+<style>
+  span{
+    font-size: 40px;
+    margin: 10px;
+  }
+    .hours{
+      color: red;
+    }
+    .minutes{
+      color: aquamarine;
+    }
+    .seconds{
+      color: blueviolet;
+    }
+</style>
+<div id="timer">
+  <span class="hours"></span>
+   <span class="minutes"></span>
+    <span class="seconds"></span>
+</div>
+<script>
+  setInterval(() => {
+    function clockTime() {
+      let d = new Date();
+      hours = d.getHours();
+      minutes = d.getMinutes();
+      seconds = d.getSeconds();
+
+      if(hours<10){
+        hours = "0"+hours;
+      }
+        if(minutes<10){
+        minutes = "0"+minutes;
+      }
+        if(seconds<10){
+        seconds = "0"+seconds;
+      }
+
+      elem = document.querySelector("#timer");
+      elem.innerHTML = `<span class="hours">` +hours+ `</span>` + ":"+`<span class="minutes">`  + minutes +`</span>` + ":" + `<span class="seconds">`+ seconds +`</span>`;
+    }
+
+    clockTime();
+  }, 1000);
+</script>

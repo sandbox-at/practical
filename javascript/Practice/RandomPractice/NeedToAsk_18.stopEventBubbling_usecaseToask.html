@@ -1,0 +1,18 @@
+<!-- The problem is that when we click on elem, we get two menus: the button-level and (the event bubbles up) the document-level menu.
+
+How to fix it? One of solutions is to think like: “When we handle right-click in the button handler, let’s stop its bubbling” and use event.stopPropagation() -->
+<p>Right-click for the document menu</p>
+<button id="elem">Right-click for the button menu (fixed with event.stopPropagation)</button>
+
+<script>
+  elem.oncontextmenu = function(event) {
+    event.preventDefault();
+     event.stopPropagation();
+    alert("Button context menu");
+  };
+
+  document.oncontextmenu = function(event) {
+    event.preventDefault();
+    alert("Document context menu");
+  };
+</script>

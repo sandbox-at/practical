@@ -1,0 +1,15 @@
+<!-- insertAdjacentHTML/Text/Element
+For that we can use another, pretty versatile method: elem.insertAdjacentHTML(where, html).
+
+The first parameter is a code word, specifying where to insert relative to elem. Must be one of the following:
+
+"beforebegin" – insert html immediately before elem,
+"afterbegin" – insert html into elem, at the beginning,
+"beforeend" – insert html into elem, at the end,
+"afterend" – insert html immediately after elem.
+The second parameter is an HTML string, that is inserted “as HTML”. -->
+<div id="div"></div>
+<script>
+  div.insertAdjacentHTML('beforebegin', '<p>Hello</p>');
+  div.insertAdjacentHTML('afterend', '<p>Bye</p>');
+</script>

@@ -1,0 +1,51 @@
+<!-- Browser default actions
+Many events automatically lead to certain actions performed by the browser.
+For instance:
+A click on a link – initiates navigation to its URL.
+A click on a form submit button – initiates its submission to the server.
+Pressing a mouse button over a text and moving it – selects the text.
+If we handle an event in JavaScript, we may not want the corresponding browser action to happen, and want to implement another behavior instead.
+
+Preventing browser actions
+There are two ways to tell the browser we don’t want it to act:
+
+The main way is to use the event object. There’s a method event.preventDefault().
+If the handler is assigned using on<event> (not by addEventListener), then returning false also works the same.
+In this HTML, a click on a link doesn’t lead to navigation; the browser doesn’t do anything: -->
+
+<!-- <a href="/" onclick="return false">Click here</a>
+or
+<a href="/" onclick="event.preventDefault()">here</a> -->
+
+<!-- Begins Prevent navigating to link using event.preventDefault() -->
+<!-- <ul id="menu" class="menu">
+  <li><a href="/html">HTML</a></li>
+  <li><a href="/javascript">JavaScript</a></li>
+  <li><a href="/css">CSS</a></li>
+</ul>
+
+<script>
+    menu.addEventListener('click',function(){
+        let href= event.target.getAttribute('href');
+        alert(href);
+        event.preventDefault();
+    })
+
+</script> -->
+
+<!-- Ends Prevent navigating to link using event.preventDefault() -->
+
+<!-- Stop Right click -->
+<button>Right-click shows browser context menu</button>
+
+<button id="noContext">
+  Right-click shows our context menu
+</button>
+<script>
+    let contextButton=document.querySelector('#noContext')
+    contextButton.addEventListener('contextmenu',function(){
+        
+        //Disable right click
+        event.preventDefault();
+    })
+</script>
