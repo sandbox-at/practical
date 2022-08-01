@@ -7,7 +7,7 @@ How to fix it? One of solutions is to think like: “When we handle right-click 
 <script>
   elem.oncontextmenu = function(event) {
     event.preventDefault();
-     event.stopPropagation();
+    //  event.stopPropagation();
     alert("Button context menu");
   };
 

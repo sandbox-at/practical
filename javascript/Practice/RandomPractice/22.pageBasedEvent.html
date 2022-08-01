@@ -9,7 +9,20 @@ Each event may be useful:
 DOMContentLoaded event – DOM is ready, so the handler can lookup DOM nodes, initialize the interface.
 load event – external resources are loaded, so styles are applied, image sizes are known etc.
 beforeunload event – the user is leaving: we can check if the user saved the changes and ask them whether they really want to leave.
-unload – the user almost left, but we still can initiate some operations, such as sending out statistics. -->
+unload – the user almost left, but we still can initiate some operations, such as sending out statistics. 
+
+The typical Sequence:
+
+[1] initial readyState:loading
+[2] readyState:interactive
+[2] DOMContentLoaded
+[3] iframe onload
+[4] img onload
+[4] readyState:complete
+[4] window onload
+
+-->
+
 <script>
   function ready() {
     alert('DOM is ready');

@@ -1,0 +1,24 @@
+
+<script>
+    // Setup
+    //Function expects a value as argument .result is set to lookup (object Name) so anything passed as function val agument wil also be passed for lookup[val] argument and it will access and display object key
+    
+function phoneticLookup(val) {
+ 
+
+let lookup={
+  "alpha":"Adams",
+  "bravo":"Boston",
+  "charlie":"Chicago",
+  "delta":"Denver",
+  "echo":"Easy",
+  "foxtrot":"Frank"
+
+};
+ let result = lookup[val];
+  // Only change code above this line
+  return result;
+}
+
+console.log(phoneticLookup("charlie"));
+</script>

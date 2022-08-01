@@ -1,0 +1,40 @@
+<!-- iframe from the same site -->
+<iframe src="/" id="iframe"></iframe>
+
+<script>
+  iframe.onload = function() {
+    // just do anything
+    iframe.contentDocument.body.prepend("Hello, world!");
+  };
+</script>
+
+<!-- Document loaded whle iframe creation and loaded on to iframe is different -->
+<iframe src="/" id="iframe"></iframe>
+
+<!-- <script>
+  let oldDoc = iframe.contentDocument;
+  iframe.onload = function() {
+    let newDoc = iframe.contentDocument;
+    // the loaded document is not the same as initial!
+    alert(oldDoc == newDoc); // false
+  };
+</script> -->
+
+<!-- The right document is definitely at place when iframe.onload triggers. But it only triggers when the whole iframe with all resources is loaded. -->
+
+<!-- We can try to catch the moment earlier using checks in setInterval: -->
+<iframe src="/" id="iframe"></iframe>
+
+<script>
+  let oldDoc = iframe.contentDocument;
+
+  // every 100 ms check if the document is the new one
+  let timer = setInterval(() => {
+    let newDoc = iframe.contentDocument;
+    if (newDoc == oldDoc) return;
+
+    alert("New document is here!");
+
+    clearInterval(timer); // cancel setInterval, don't need it any more
+  }, 100);
+</script>

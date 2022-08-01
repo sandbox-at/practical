@@ -1,0 +1,31 @@
+1. A keyword called let was introduced in ES6, a major update to JavaScript, to solve this potential issue with the var keyword. You'll learn about other ES6 features in later challenges.
+
+If you replace var with let in the code above, it results in an error:
+
+let camper = "James";
+let camper = "David";
+The error can be seen in your browser console.
+
+So unlike var, when you use let, a variable with the same name can only be declared once.
+
+2. In ES6, you can also declare variables using the const keyword.
+
+const has all the awesome features that let has, with the added bonus that variables declared using const are read-only. They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned:
+
+const FAV_PET = "Cats";
+FAV_PET = "Dogs";
+The console will display an error due to reassigning the value of FAV_PET.
+
+
+3. Return Early Pattern for Functions
+When a return statement is reached, the execution of the current function stops and control returns to the calling location.
+
+Example
+
+function myFun() {
+  console.log("Hello");
+  return "World";
+  console.log("byebye")
+}
+myFun();
+The above will display the string Hello in the console, and return the string World. The string byebye will never display in the console, because the function exits at the return statement.

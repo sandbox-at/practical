@@ -1,0 +1,111 @@
+<style>
+    body>header>div.sc-nav__wrapper>nav>ul>li.sc-nav__item--has-meganav:nth-child(6):hover>.sc-nav__mgnv-wrapper div.sc-nav-drop__col.sc-nav-drop__col-promo a.adbe-cls {
+        visibility: visible !important;
+    }
+
+    body>header>div.sc-nav__wrapper>nav>ul>li:nth-child(6) div.sc-nav-drop__col.sc-nav-drop__col-promo,
+    body>header>div.sc-nav__wrapper>nav>ul>li:nth-child(6) div.sc-nav-drop__col.sc-nav-drop__col-promo a.adbe-cls {
+        visibility: hidden !important;
+    }
+</style>
+<script>
+    var promoCTAlink_ucr12 = '';
+    try {
+        var existingURLparameter_ucr12 = window.location.href;
+        var aggregrateCode_ucr12 = 'IB03';
+        var aggregatorType_ucr12 = '';
+        var aggregatorInstance_ucr12 = 'pintile_nav';
+
+        if (existingURLparameter_ucr12.split(/subChanCode=/gi)[1] != undefined) {
+            aggregrateCode_ucr12 = existingURLparameter_ucr12.split(/subChanCode=/gi)[1].split("&")[0];
+        }
+
+        if (existingURLparameter_ucr12.split(/referID=/gi)[1] != undefined) {
+            //aggregatorType_ucr12 = existingURLparameter_ucr12.split(/referID=/gi)[1].split("&")[0];
+        }
+
+        if (existingURLparameter_ucr12.split(/instance=/gi)[1] != undefined) {
+            //aggregatorInstance_ucr12 = existingURLparameter_ucr12.split(/instance=/gi)[1].split("&")[0];
+        }
+
+        promoCTAlink_ucr12 = "https://www.sc.com/sg/bank-with-us/manage-your-finances/anytime-cash/?subChanCode=" + aggregrateCode_ucr12 + "&referID=pintile_nav";
+
+    } catch (e) { console.log(e); }
+
+    var navBorrowPromoOffer_adbe_ucr12 = {
+        "promBannerImage": "https://av.sc.com/sg/content/images/ATC-290x150-1.jpg",
+        "promoTitle": "Anytime Cash",
+        "promoDescription": "Transfer money instantly to anyone from low to no fees",
+        // "promoCTAlink": "https://www.sc.com/sg/borrow/loans/balance-transfer/?subChanCode=IB03&instance=DropdownBanner"
+    };
+
+    var navBorrowPromoOffer_adbe_ucr12 = '<a class="adbe-cls" title="' + navBorrowPromoOffer_adbe_ucr12.promoTitle + '" href="' + promoCTAlink_ucr12 + '"> <div class="sc-nav-drop__promo-box"> <img src="' + navBorrowPromoOffer_adbe_ucr12.promBannerImage + '" alt="' + navBorrowPromoOffer_adbe_ucr12.promoTitle + '" loading="lazy" width="290" height="150"> <div class="sc-nav-drop__promo-text"> <p class="sc-nav-drop__promo-title">' + navBorrowPromoOffer_adbe_ucr12.promoTitle + '</p> <p class="sc-nav-drop__promo-desc">' + navBorrowPromoOffer_adbe_ucr12.promoDescription + '</p> </div> </div> </a>';
+
+    Flickerlessly = window.Flickerlessly || {};
+    !function (A) {
+        "use strict";
+        var init = function (id, sel, callback, persist) {
+            var animationName = 'atNodeInserted' + id;
+            var cssStr = '@keyframes ' + animationName + ' {from {opacity:0.99} to {opacity:1} }\n';
+            cssStr += sel + '{animation-duration:0.001s;animation-name:' + animationName + ';visibility:hidden}';
+            var head = document.getElementsByTagName("head")[0];
+            if (head) {
+                var style = document.createElement("style");
+                style.setAttribute("type", "text/css");
+                if (style.styleSheet)
+                    style.styleSheet.cssText = cssStr;
+                else
+                    style.appendChild(document.createTextNode(cssStr));
+                head.insertBefore(style, head.firstChild)
+            };
+            var _insertListener = function (event) {
+                if (event.animationName === animationName && typeof event.target === 'object') {
+                    var isExecute = ((persist === true) || (persist === false && event.target.getAttribute('data-flk-success') === null)) ? true : false;
+                    // if (console && console.info) console.info("Node " + sel + " ready! Execute: " + isExecute, event.target);
+                    if (typeof callback === 'function' && isExecute) {
+                        callback(event.target);
+                        event.target.setAttribute('data-flk-success', animationName);
+                    }
+                    event.target.style.visibility = 'visible';
+                }
+            };
+            ['animationstart', 'MSAnimationStart', 'webkitAnimationStart'].forEach(function (item, index) {
+                document.addEventListener(item, _insertListener, false);
+            });
+        };
+        A.onReady = function () {
+            for (var i = 0; i < arguments.length; i++) {
+                var obj = arguments[i];
+                var selector = obj.selector;
+                var success = obj.success || null;
+                var persist = obj.persist || false;
+                var rand = Math.floor((Math.random() * 100) + 1);
+                init(rand, selector, success, persist);
+            };
+        };
+    }(Flickerlessly);
+
+    Flickerlessly.onReady(
+        {
+            selector: "body > header > div.sc-nav__wrapper > nav > ul > li:nth-child(6) div.sc-nav-drop__col.sc-nav-drop__col-promo",
+            persist: true,
+            success: function (el2) {
+                if (!document.querySelector("body > header > div.sc-nav__wrapper > nav > ul > li:nth-child(6) div.sc-nav-drop__col.sc-nav-drop__col-promo").classList.contains("updatedCode")) {
+                    try {
+                        document.querySelector("body > header > div.sc-nav__wrapper > nav > ul > li:nth-child(6) div.sc-nav-drop__col.sc-nav-drop__col-promo").innerHTML = navBorrowPromoOffer_adbe_ucr12;
+
+                        document.querySelector("body > header > div.sc-nav__wrapper > nav > ul > li:nth-child(6) div.sc-nav-drop__col.sc-nav-drop__col-promo a.adbe-cls").addEventListener("mousedown", function (event) {
+                            adobe.target.trackEvent({
+                                "mbox": "mboxClickTrack",
+                                "params": {
+                                    "clicked": "anytimeCashPintileClick"
+                                }
+                            });
+                        });
+                    } catch (e) { console.log(e); }
+                    el2.classList.add("updatedCode");
+                }
+            }
+        }
+    );
+</script>

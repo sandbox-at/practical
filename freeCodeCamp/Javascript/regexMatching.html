@@ -1,0 +1,27 @@
+<!-- Apply the regex myRegex on the string myString using the .test() method.
+The test method here returns true.
+Search the word Hello -->
+
+<script>
+
+//Check for match word Hello
+
+let myString = "Hello, World!";
+let myRegex = /Hello/;
+let result = myRegex.test(myString); // Change this line
+
+// Check for multiple word matches
+//Complete the regex petRegex to match the pets dog, cat, bird, or fish.
+
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/; // Change this line
+let result1 = petRegex.test(petString);
+
+//Match ignoring cases
+// Write a regex fccRegex to match freeCodeCamp, no matter its case. 
+
+let myString1 = "freeCodeCamp";
+let fccRegex = /freeCodeCamp/i; // Change this line
+let result2 = fccRegex.test(myString);
+
+</script>

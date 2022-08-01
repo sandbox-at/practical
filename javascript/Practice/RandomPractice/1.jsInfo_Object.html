@@ -16,8 +16,9 @@ let propertyCheck= ["multiword property"];
 
 
 // access by variable
- alert( user[check]); // John (if enter "name")
+ alert( user[check]); // John (if enter "name") // => user.name
  alert( user[propertyCheck]); //Work
 </script>
 
 <!-- Question1 : check variable defined out of user object scope and also passed name as string , then how can I access name:John in alert. -->
+Ans:user[check] i.e user["name"] i.e user.name
