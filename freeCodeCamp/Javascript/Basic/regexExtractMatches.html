@@ -57,3 +57,19 @@ let myRegex1 = /s+/g; // Change this line
 let result5 = difficultSpelling.match(myRegex);
 console.log(result5);
 </script>
+
+<!-- use the * character to match zero or more a characters. -->
+<script>
+    let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
+let chewieRegex = /Aa*/; // Change this line
+let result6 = chewieQuote.match(chewieRegex);
+</script>
+
+<!-- Start with letter a and ends with letter k. as below
+/a[a-z]*k/ -->
+
+<script>
+    let text = "<h1>Winter is coming</h1>";
+let myRegex2 = /<.*?>/; // Change this line
+let result7 = text.match(myRegex2);
+</script>
